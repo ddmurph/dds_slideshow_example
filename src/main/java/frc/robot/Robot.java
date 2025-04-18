@@ -12,12 +12,15 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.drive.MecanumDrive;
 import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;
 
+
 /** This is a demo program showing how to use Mecanum control with the MecanumDrive class. */
 public class Robot extends TimedRobot {
   private static final int kFrontLeftChannel = 2;
   private static final int kRearLeftChannel = 3;
   private static final int kFrontRightChannel = 1;
   private static final int kRearRightChannel = 0;
+
+  private static final int kExampleChannel = 6;
 
   private static final int kJoystickChannel = 0;
 
@@ -30,6 +33,8 @@ public class Robot extends TimedRobot {
     PWMSparkMax rearLeft = new PWMSparkMax(kRearLeftChannel);
     PWMSparkMax frontRight = new PWMSparkMax(kFrontRightChannel);
     PWMSparkMax rearRight = new PWMSparkMax(kRearRightChannel);
+
+    PWMSparkMax example = new PWMSparkMax(kExampleChannel);
 
     // Invert the right side motors.
     // You may need to change or remove this to match your robot.
